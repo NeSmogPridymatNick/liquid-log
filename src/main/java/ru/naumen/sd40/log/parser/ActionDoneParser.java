@@ -208,6 +208,10 @@ public class ActionDoneParser
             {
                 getDtObjectActions++;
             }
+            else if (actionInLowerCase.equals("getcatalogsaction"))
+            {
+                catalogsAction++;
+            }
             else if (actionInLowerCase.matches("(?i)[a-zA-Z]+search[a-zA-Z]+"))
             {
                 searchActions++;
