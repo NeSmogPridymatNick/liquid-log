@@ -68,7 +68,10 @@ public class App
             //Parse sdng
             try (BufferedReader br = new BufferedReader(new FileReader(log), 32 * 1024 * 1024))
             {
-                String line;
+                updateCase updata = new updateCase(timeParser);
+                data = updata.updata(br);
+
+                /*String line;
                 while ((line = br.readLine()) != null)
                 {
                     long time = timeParser.parseLine(line);
@@ -83,14 +86,16 @@ public class App
                     long key = count * min5;
 
                     data.computeIfAbsent(key, k -> new DataSet()).parseLine(line);
-                }
+                }*/
             }
             break;
         case "gc":
             //Parse gc log
             try (BufferedReader br = new BufferedReader(new FileReader(log)))
             {
-                String line;
+                updateCase updata = new updateCase(gcTime);
+                data = updata.updata(br);
+                /*String line;
                 while ((line = br.readLine()) != null)
                 {
                     long time = gcTime.parseTime(line);
@@ -104,7 +109,7 @@ public class App
                     long count = time / min5;
                     long key = count * min5;
                     data.computeIfAbsent(key, k -> new DataSet()).parseGcLine(line);
-                }
+                }*/
             }
             break;
         case "top":
