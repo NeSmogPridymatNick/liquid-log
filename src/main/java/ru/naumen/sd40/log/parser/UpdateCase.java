@@ -5,17 +5,17 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.HashMap;
 
-public class updateCase {
+public class UpdateCase {
     private TimeParser timeParser;
     private GCParser.GCTimeParser gcTime;
     private HashMap<Long, DataSet> data = new HashMap<>();
     boolean flag;
-    public updateCase(TimeParser timeP)
+    public UpdateCase(TimeParser timeP)
     {
         flag = true;
         timeParser = timeP;
     }
-    public updateCase(GCParser.GCTimeParser gcT)
+    public UpdateCase(GCParser.GCTimeParser gcT)
     {
         flag = false;
         gcTime = gcT;
