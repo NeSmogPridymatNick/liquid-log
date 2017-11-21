@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
  * @author dkolmogortsev
  *
  */
-public class TopParser
+public class TopParser implements IDataParser
 {
 
     private SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHH:mm");
